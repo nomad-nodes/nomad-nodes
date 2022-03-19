@@ -10,3 +10,4 @@ artifacts
 
 # hardhat typechain generated files
 types/
+**/*/.env
