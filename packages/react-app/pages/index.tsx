@@ -3,6 +3,7 @@ import { Tabs, Tab, Typography, Box, Link } from "@mui/material";
 import deployedContracts from "../../hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
 import { StorageContract, GreeterContract, ButtonAppBar } from "@/components";
+import UserPage from "./UserPage";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -29,14 +30,18 @@ export default function App() {
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs">
+            <Tab label="UserPage"></Tab>
             <Tab label="Storage Contract" {...a11yProps(0)} />
             <Tab label="Greeter Contract" {...a11yProps(1)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <StorageContract contractData={contracts?.Storage} />
+          <UserPage />
         </TabPanel>
         <TabPanel value={value} index={1}>
+          <StorageContract contractData={contracts?.Storage} />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
           <GreeterContract contractData={contracts?.Greeter} />
         </TabPanel>
       </Box>

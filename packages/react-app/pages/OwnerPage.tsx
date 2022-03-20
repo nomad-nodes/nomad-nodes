@@ -15,13 +15,12 @@ import {
   ContractKitProvider,
 } from "@celo-tools/use-contractkit";
 import { AppProps } from "next/app";
-import '../styles/styles.css'
 
-function MyApp({ Component, pageProps, router }: AppProps): React.ReactElement {
+function OwnerPage({ Component, pageProps, router }: AppProps): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Nomad Nodes</title>
+        <title>Celo DApp Starter</title>
         <meta name="description" content="Celo DApp Starter" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link
@@ -73,4 +72,4 @@ function MyApp({ Component, pageProps, router }: AppProps): React.ReactElement {
   );
 }
 
-export default MyApp;
+export default OwnerPage;

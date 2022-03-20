@@ -18,7 +18,7 @@ export function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar sx={{ gap: 2 }}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Celo Dapp Starter
+            Nomad Nodes
           </Typography>
           {network && <Chip label={network.name} color="secondary" />}
           {address && (
