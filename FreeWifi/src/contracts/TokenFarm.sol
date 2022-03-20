@@ -28,7 +28,7 @@ contract TokenFarm {
     // require amount greater than 0
     require(_amount > 0, 'amount cannot be 0');
 
-    // trasnfer mock dai tokens to this contract address for staking
+    // trasnfer cUSD tokens to this contract address for staking
     daiToken.transferFrom(msg.sender, address(this), _amount);
 
     // update staking balance
@@ -52,17 +52,17 @@ contract TokenFarm {
     // require amount greater than 0
     require(balance > 0, 'staking balance cannot be 0');
 
-    // unstake all dai tokens
+    // unstake all cUSD tokens
     daiToken.transfer(msg.sender, balance);
 
     // reset staking balance
     stakingBalance[msg.sender] = 0;
   }
 
-  // 3. issuing tokens
+  // 3. issue tokens
   function issueTokens() public {
     require(msg.sender == owner, 'caller must be the owner');
-    // for loop to iterate through stakers array. this is what for loop looks like in solidity
+    
     for (uint i=0; i<stakers.length; i++) {
       address recipient = stakers[i];
       uint balance = stakingBalance[recipient];
