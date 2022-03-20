@@ -87,9 +87,9 @@ function OwnerPage() {
                 <Component {...pageProps} />
               )} */}
               <ButtonAppBar />
-              {balance && balance.map(([currencyName, BigN]) => {
+              {balance.length ? balance.map(([currencyName, BigN]) => {
                 return <div style={{ fontSize: '3em' }}>{currencyName}: {BigN.toString().substring(0, 2)}</div>
-              })}
+              }) : 'refreshing'}
               {/* <footer style={{ textAlign: "center" }}>
                 <Link
                   href="https://github.com/celo-org/celo-progressive-dapp-starter"
