@@ -28,7 +28,6 @@ contract TokenFarm {
     // require amount greater than 0
     require(_amount > 0, 'amount cannot be 0');
 
-    // all ERC20 tokens have transferFrom, letting others to move tokens for you (delegated transfers)
     // trasnfer mock dai tokens to this contract address for staking
     daiToken.transferFrom(msg.sender, address(this), _amount);
 
