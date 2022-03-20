@@ -1,8 +1,8 @@
 {
-  "name": "defi-tutorial",
+  "name": "Celo",
   "version": "0.1.0",
   "description": "DeFi Token Staking App",
-  "author": "gregory@dappuniversity.com",
+  "author": "Jason S",
   "dependencies": {
     "@celo-tools/use-contractkit": "^3.0.1",
     "@celo/contractkit": "^1.5.2",
