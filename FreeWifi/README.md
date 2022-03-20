@@ -1,6 +1,7 @@
 # Yield Farming
 
 ## Purpose
+This is a yield farming dApp for Wifi router device owner where they can stake stablecoins and earn yield in WAVE token.
 
 ## Setup
 
