@@ -4,7 +4,7 @@
 
 ## Setup
 
-- `npm install` - install all the modules needed to run the dApp
+- `npm install --force` - install all the modules needed to run the dApp
 - Install and start [Ganache](https://www.trufflesuite.com/ganache)
 - Install and setup [MetaMask](https://metamask.io/)
 
@@ -21,16 +21,3 @@
 ## User Interface
 
 ![alt text](img/yield_farming_UI.jpg)
-
-## Misc
-
-```
-# Inside of a truffle console
-> tokenFarm = await TokenFarm.deployed()
-
-> tokenFarm
-
-> tokenFarm.address
-
-> name = await tokenFarm.name()
-```
