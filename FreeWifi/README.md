@@ -1,10 +1,6 @@
 # Yield Farming
 
-A dApp which implements the concept of yield farming / liquidity mining following the [Dapp University Tutorial](https://www.youtube.com/watch?v=CgXQC4dbGUE).
-
 ## Purpose
-
-Users can stake and unstake a mock stablecoin called mDAI. When unstake, users withdraw mDAI tokens and are rewarded with protocol tokens called DAPP.
 
 ## Setup
 
