@@ -12,38 +12,38 @@ interface TabPanelProps {
 }
 
 export default function App() {
-  const { network } = useContractKit();
+  // const { network } = useContractKit();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
-  const contracts =
-    deployedContracts[network?.chainId?.toString()]?.[
-      network?.name?.toLocaleLowerCase()
-    ]?.contracts;
+  // const contracts =
+  //   deployedContracts[network?.chainId?.toString()]?.[
+  //     network?.name?.toLocaleLowerCase()
+  //   ]?.contracts;
 
   return (
     <div>
-      <ButtonAppBar />
+      {/* <ButtonAppBar /> */}
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs">
             <Tab label="UserPage"></Tab>
-            <Tab label="Storage Contract" {...a11yProps(0)} />
-            <Tab label="Greeter Contract" {...a11yProps(1)} />
+            {/* <Tab label="Storage Contract" {...a11yProps(0)} />
+            <Tab label="Greeter Contract" {...a11yProps(1)} /> */}
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
           <UserPage />
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        {/* <TabPanel value={value} index={1}>
           <StorageContract contractData={contracts?.Storage} />
         </TabPanel>
         <TabPanel value={value} index={2}>
           <GreeterContract contractData={contracts?.Greeter} />
-        </TabPanel>
+        </TabPanel> */}
       </Box>
     </div>
   );

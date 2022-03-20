@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps, router }: AppProps): React.ReactElement {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-      <ContractKitProvider
+      {/* <ContractKitProvider
         dapp={{
           name: "use-contractkit demo",
           description: "A demo DApp to showcase functionality",
@@ -38,20 +38,20 @@ function MyApp({ Component, pageProps, router }: AppProps): React.ReactElement {
         }}
         network={Alfajores}
         // networks={[Mainnet, Alfajores]}
-      >
-        <SnackbarProvider
+      > */}
+        {/* <SnackbarProvider
           maxSnack={3}
           anchorOrigin={{
             vertical: "bottom",
             horizontal: "right",
           }}
         >
-          <ApolloProvider client={client}>
+          <ApolloProvider client={client}> */}
             <div suppressHydrationWarning>
               {typeof window === "undefined" ? null : (
                 <Component {...pageProps} />
               )}
-              <footer style={{ textAlign: "center" }}>
+              {/* <footer style={{ textAlign: "center" }}>
                 <Link
                   href="https://github.com/celo-org/celo-progressive-dapp-starter"
                   target="_blank"
@@ -64,11 +64,11 @@ function MyApp({ Component, pageProps, router }: AppProps): React.ReactElement {
                 >
                   <Discord style={{width: "40px", margin: "5px"}}/>
                 </Link>
-              </footer>
+              </footer> */}
             </div>
-          </ApolloProvider>
+          {/* </ApolloProvider>
         </SnackbarProvider>
-      </ContractKitProvider>
+      </ContractKitProvider> */}
     </>
   );
 }
