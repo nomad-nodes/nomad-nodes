@@ -31,14 +31,14 @@ const FilledBar = ({ numFilled, numMax, width, oneBar }) => {
     counter--;
     console.log(counter);
     const isFilled = (counter > -1) === true
-    return () => oneBar(width / numMax, idx, isFilled)
+    return () => oneBar(width / numMax, idx + .5, isFilled)
   })
   return <div style={{ display: 'flex' }}>
     {bars.map((Barcmp) => Barcmp())}
   </div>
 }
 function WifiCard({ name, strength }) {
-  return (<Card sx={{ width: "50%", minWidth: '384px' }}>
+  return (<Card sx={{ width: 1 }}>
     <CardHeader title={name} />
     <CardContent>
       {strength}
@@ -47,24 +47,46 @@ function WifiCard({ name, strength }) {
   </Card>)
 }
 export default function UserPage() {
-  return <ul style={{
-    listStyleType: "none",
-    display: "flex",
-    flexDirection: "column"
-  }}>
-    {
-      wifis.map(({ name, strength }) => {
-        return (<li style={{ marginTop: ".2em" }}>
-          <WifiCard name={name} strength={strength} />
-        </li>)
-      })
-    }
-  </ul>
+  return <div>
+    <ul style={{
+      listStyleType: "none",
+      display: "flex",
+      flexDirection: "column",
+      paddingInlineStart: 0,
+      alignItems: "center",
+    }}>
+      {
+        wifis.map(({ name, strength }) => {
+          return (<li style={{ padding: '.2em .1em', maxWidth: '786px', minWidth: '364px', marginTop: ".2em" }}>
+            <WifiCard name={name} strength={strength} />
+          </li>)
+        })
+      }
+    </ul>
+  </div>
 }
 
 function getRandomIntFactory(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return () => Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  const hash = {}
+  return () => {
+    const num = Math.floor(Math.random() * (max - min) + min);
+
+    console.log(hash);
+
+    if (num in hash) {
+      let actual;
+      for (let i = 1; i <= max; i++) {
+        if (i in hash === false) {
+          return i;
+        }
+      }
+      return actual
+    } else {
+      hash[num] = true
+      return num;
+    }
+  }; //The maximum is exclusive and the minimum is inclusive
 }
 
