@@ -1,17 +1,17 @@
 import { Card, CardContent, CardHeader } from "@mui/material";
-
+const getWifiStrength = getRandomIntFactory(1,6);
 const wifis = [
   {
     name:'mariowifi',
-    strength: createRandomNo()
+    strength: getWifiStrength()
   },
   {
     name:'jasonwifi',
-    strength: createRandomNo()
+    strength: getWifiStrength()
   },
   {
     name:'jimWifi',
-    strength: createRandomNo()
+    strength: getWifiStrength()
   }
 ];
 function WifiCard({name, strength}) {
@@ -38,7 +38,9 @@ export default function UserPage() {
   </ul>
 }
 
-function createRandomNo() {
-  return 5
+function getRandomIntFactory(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return () => Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
