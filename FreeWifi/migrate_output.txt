@@ -1,115 +1,65 @@
-Compiling your contracts...
-===========================
-> Everything is up to date, there is nothing to compile.
-
-> Something went wrong while attempting to connect to the network at http://127.0.0.1:8545. Check your network configuration.
-
-Could not connect to your Ethereum client with the following parameters:
-    - host       > 127.0.0.1
-    - port       > 8545
-    - network_id > *
-Please check that your Ethereum client:
-    - is running
-    - is accepting RPC connections (i.e., "--rpc" or "--http" option is used in geth)
-    - is accessible over the network
-    - is properly configured in your Truffle configuration file (truffle-config.js)
-
-Truffle v5.4.12 (core: 5.4.12)
-Node v12.22.0
-sushanthsamala@Sushanths-MacBook-Pro FreeWifi % truffle migrate
-
-Compiling your contracts...
-===========================
-> Everything is up to date, there is nothing to compile.
-
-
-
 Starting migrations...
 ======================
-> Network name:    'development'
-> Network id:      5777
-> Block gas limit: 6721975 (0x6691b7)
-
-
-1_initial_migration.js
-======================
-
-   Replacing 'Migrations'
-   ----------------------
-   > transaction hash:    0xbc7a2a0c160f97c0ee2875ea757d3cb43e2ab323e782888af16b2eb2167c3447
-   > Blocks: 0            Seconds: 0
-   > contract address:    0xC6904F94509301968E3083cABF61EebAD3e32a79
-   > block number:        1
-   > block timestamp:     1647738369
-   > account:             0x9Cc0793e2e0E69caFA1670303173E7bCFcE08A8f
-   > balance:             99.99549526
-   > gas used:            225237 (0x36fd5)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00450474 ETH
-
-
-   > Saving migration to chain.
-   > Saving artifacts
-   -------------------------------------
-   > Total cost:          0.00450474 ETH
+> Network name:    'alfajores'
+> Network id:      44787
+> Block gas limit: 0 (0x0)
 
 
 2_deploy_contracts.js
 =====================
 
-   Replacing 'DaiToken'
+   Deploying 'DaiToken'
    --------------------
-   > transaction hash:    0x53dbff1eb04f7bb35c5206e7681c891649092e830fb3eb8ad8852bff1815cdb3
-   > Blocks: 0            Seconds: 0
-   > contract address:    0xe70bDE9178Ecc4f9dbE38Bcbb9818fdF909692aD
-   > block number:        3
-   > block timestamp:     1647738370
-   > account:             0x9Cc0793e2e0E69caFA1670303173E7bCFcE08A8f
-   > balance:             99.97977912
-   > gas used:            743444 (0xb5814)
-   > gas price:           20 gwei
+   > transaction hash:    0x88b779ddf90021a5bcf4eba30aea25a3bb70400eb6f87717cf7bd9794682f4d5
+   > Blocks: 1            Seconds: 4
+   > contract address:    0xd9e6748Dda10c6261cc3FA542593f1300E0B0829
+   > block number:        10477009
+   > block timestamp:     1647742727
+   > account:             0x16C3a396f0489db4F0d5106b17215cF8e6E1e78d
+   > balance:             4.9958677665
+   > gas used:            744344 (0xb5b98)
+   > gas price:           0.5 gwei
    > value sent:          0 ETH
-   > total cost:          0.01486888 ETH
+   > total cost:          0.000372172 ETH
 
 
-   Replacing 'DappToken'
+   Deploying 'DappToken'
    ---------------------
-   > transaction hash:    0x47cd96019dd0f6e471cfbed461f754ae44a678122969afb1056b7e011b07e0ca
-   > Blocks: 0            Seconds: 0
-   > contract address:    0x773D26CC8A062c782f0F0202451a07bf9c9016Dc
-   > block number:        4
-   > block timestamp:     1647738370
-   > account:             0x9Cc0793e2e0E69caFA1670303173E7bCFcE08A8f
-   > balance:             99.9649112
-   > gas used:            743396 (0xb57e4)
-   > gas price:           20 gwei
+   > transaction hash:    0x489ab355d0674877359a611689a9d519da83d0684fe2f2b96e997d12fc866e93
+   > Blocks: 0            Seconds: 4
+   > contract address:    0xc92bA6D6B0A39E7625596E7620887935361943e8
+   > block number:        10477010
+   > block timestamp:     1647742732
+   > account:             0x16C3a396f0489db4F0d5106b17215cF8e6E1e78d
+   > balance:             4.9954956185
+   > gas used:            744296 (0xb5b68)
+   > gas price:           0.5 gwei
    > value sent:          0 ETH
-   > total cost:          0.01486792 ETH
+   > total cost:          0.000372148 ETH
 
 
-   Replacing 'TokenFarm'
+   Deploying 'TokenFarm'
    ---------------------
-   > transaction hash:    0x1279668f4e3c52bd1aec7b5d2910b4115fe5eed4e7dc84b637b8a0f3ad5d5853
-   > Blocks: 0            Seconds: 0
-   > contract address:    0xe32fd077395e130Dc963b7892578d32C513b4f12
-   > block number:        5
-   > block timestamp:     1647738371
-   > account:             0x9Cc0793e2e0E69caFA1670303173E7bCFcE08A8f
-   > balance:             99.94722008
+   > transaction hash:    0xa20b0842f550dd1b8600747b39e0d5a0352fa836262a3a263a1ac5ca3391689a
+   > Blocks: 1            Seconds: 4
+   > contract address:    0x8860F018A54E4C145780472DB639E4b1f2d0153d
+   > block number:        10477011
+   > block timestamp:     1647742737
+   > account:             0x16C3a396f0489db4F0d5106b17215cF8e6E1e78d
+   > balance:             4.9950533405
    > gas used:            884556 (0xd7f4c)
-   > gas price:           20 gwei
+   > gas price:           0.5 gwei
    > value sent:          0 ETH
-   > total cost:          0.01769112 ETH
+   > total cost:          0.000442278 ETH
 
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.04742792 ETH
+   > Total cost:         0.001186598 ETH
 
 
 Summary
 =======
-> Total deployments:   4
-> Final cost:          0.05193266 ETH
+> Total deployments:   3
+> Final cost:          0.001186598 ETH
