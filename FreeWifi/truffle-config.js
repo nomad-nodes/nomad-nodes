@@ -7,14 +7,15 @@ const Web3 = require('web3')
 module.exports = {
   networks: {
     development: {
-      host: "127.0.0.1",
-      network_id: "8545" // Match any network id
+      host: "127.0.0.1",     // Localhost (default: none)
+     port: 7545,            // Standard Ethereum port (default: none)
+     network_id: "*",       // Any network (default: none)
+      },
     },
-  },
   alfajores: {
   provider: new HDWalletProvider({
-    privateKeys: [process.env.PRIVATE_KEY],
-    providerOrUrl: `https://alfajores-forno.celo-testnet.org`
+    mnemonic: 'length clump advance fresh below sand walk crowd rent twist canyon truly',
+    providerOrUrl: 'https://alfajores-forno.celo-testnet.org'
   }),
   network_id: 44787
 },
