@@ -9,7 +9,7 @@ contract TokenFarm {
   DaiToken public daiToken;
   address public owner;
 
-  // keep track of all the stakers so that we can reward them with dapp tokens
+  // keep track of all the stakers so that we can reward stakers with WAVE tokens
   address[] public stakers;
 
   mapping(address => uint) public stakingBalance;
@@ -62,7 +62,7 @@ contract TokenFarm {
   // 3. issue tokens
   function issueTokens() public {
     require(msg.sender == owner, 'caller must be the owner');
-    
+
     for (uint i=0; i<stakers.length; i++) {
       address recipient = stakers[i];
       uint balance = stakingBalance[recipient];
