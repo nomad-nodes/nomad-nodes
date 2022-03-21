@@ -5,13 +5,16 @@ export default function HomePage() {
   return (
     <div className="text-center">
       <Link to="/wifi-select">
-        <h1>Select the Wi-fi you wish to host</h1>
+        <h1>Select the WiFi you wish to host</h1>
+        <hr></hr>
       </Link>
       <Link to="/statistics">
-        <h1> Check the Statistics of your Wi-fi Usage </h1>
+        <h1> Staking </h1>
+        <hr></hr>
       </Link>
       <Link to="/wallet">
-        <h1> Add or Change Existing Wallet </h1>
+        <h1> Wallet Balance </h1>
+        <hr></hr>
       </Link>
       <Link to="/">
         <button className="primary-button">Log out</button>
